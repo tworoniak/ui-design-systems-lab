@@ -5,6 +5,8 @@ import {
   FormInput,
   Layers3,
   TableProperties,
+  PanelTop,
+  Palette,
   Scale,
 } from 'lucide-react';
 
@@ -14,6 +16,8 @@ const navItems = [
   { to: '/forms', label: 'Forms', icon: FormInput },
   { to: '/overlays', label: 'Overlays', icon: Layers3 },
   { to: '/data-display', label: 'Data Display', icon: TableProperties },
+  { to: '/navigation-feedback', label: 'Nav & Feedback', icon: PanelTop },
+  { to: '/theming', label: 'Theming', icon: Palette },
   { to: '/comparison', label: 'Comparison', icon: Scale },
 ];
 
