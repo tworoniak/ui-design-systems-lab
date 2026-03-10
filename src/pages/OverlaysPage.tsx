@@ -243,7 +243,7 @@ function RadixDropdownDemo() {
       <DropdownMenuPrimitive.Portal>
         <DropdownMenuPrimitive.Content
           sideOffset={8}
-          className='z-50 min-w-[180px] rounded-md border bg-popover p-1 text-popover-foreground shadow-md'
+          className='z-50 min-w-45 rounded-md border bg-popover p-1 text-popover-foreground shadow-md'
         >
           <DropdownMenuPrimitive.Item className='cursor-default rounded-sm px-3 py-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground'>
             Edit profile
