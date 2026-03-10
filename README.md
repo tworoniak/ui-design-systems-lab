@@ -1,5 +1,12 @@
 # 🎨 UI Systems Lab
 
+![React](https://img.shields.io/badge/React-18-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Vite](https://img.shields.io/badge/Vite-Build%20Tool-purple)
+![Radix](https://img.shields.io/badge/Radix-Primitives-black)
+![shadcn](https://img.shields.io/badge/shadcn-ui-gray)
+![MUI](https://img.shields.io/badge/MUI-Material%20UI-blue)
+
 A hands-on **React + TypeScript** playground for learning and comparing modern UI/design system approaches with:
 
 - **Radix Primitives**
@@ -315,12 +322,27 @@ Possible next steps for this project:
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-![Home Page](./src/assets/screenshots/home.png)
-![Buttons Comparison](./src/assets/screenshots/buttons.png)
-![Forms Comparison](./src/assets/screenshots/forms.png)
-![Theming Page](./src/assets/screenshots/theming.png)
+## Home
+
+![Home](./src/assets/screenshots/home.png)
+
+## Buttons Comparison
+
+![Buttons](./src/assets/screenshots/buttons.png)
+
+## Forms Comparison
+
+![Forms](./src/assets/screenshots/forms.png)
+
+## Data Display
+
+![Data](./src/assets/screenshots/data-display.png)
+
+## Theming
+
+![Theming](./src/assets/screenshots/theming.png)
 
 ---
 
