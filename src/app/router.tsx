@@ -5,6 +5,7 @@ import ButtonsPage from '@/pages/ButtonsPage';
 import FormsPage from '@/pages/FormsPage';
 import OverlaysPage from '@/pages/OverlaysPage';
 import ComparisonPage from '@/pages/ComparisonPage';
+import DataDisplayPage from '@/pages/DataDisplayPage';
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
       { path: 'buttons', element: <ButtonsPage /> },
       { path: 'forms', element: <FormsPage /> },
       { path: 'overlays', element: <OverlaysPage /> },
+      { path: 'data-display', element: <DataDisplayPage /> },
       { path: 'comparison', element: <ComparisonPage /> },
     ],
   },

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import Sidebar from '@/components/layout/Sidebar';
 import Topbar from '@/components/layout/Topbar';
+import Footer from './Footer';
 
 type AppShellProps = {
   children: ReactNode;
@@ -16,6 +17,7 @@ export default function AppShell({ children }: AppShellProps) {
           <main className='flex-1 p-6 md:p-8'>{children}</main>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

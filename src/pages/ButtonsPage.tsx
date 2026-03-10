@@ -1,19 +1,33 @@
 import MuiButton from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import * as Dialog from '@radix-ui/react-dialog';
+import { Bell, Heart, Trash2 } from 'lucide-react';
+
 import PageHeader from '@/components/shared/PageHeader';
 import DemoCard from '@/components/shared/DemoCard';
 import { Button as ShadcnButton } from '@/components/ui/button';
 
-function RadixButtonDemo() {
+function CustomButton({
+  children,
+  variant = 'primary',
+}: {
+  children: React.ReactNode;
+  variant?: 'primary' | 'outline' | 'ghost' | 'destructive';
+}) {
+  const classes = {
+    primary: 'bg-primary text-primary-foreground hover:opacity-90',
+    outline:
+      'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+    ghost: 'bg-transparent hover:bg-accent hover:text-accent-foreground',
+    destructive: 'bg-destructive text-destructive-foreground hover:opacity-90',
+  };
+
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button className='inline-flex h-10 items-center justify-center rounded-md bg-black px-4 text-sm font-medium text-white transition hover:opacity-90 dark:bg-white dark:text-black'>
-          Radix Trigger Button
-        </button>
-      </Dialog.Trigger>
-    </Dialog.Root>
+    <button
+      type='button'
+      className={`inline-flex h-10 items-center justify-center gap-2 rounded-md px-4 text-sm font-medium transition ${classes[variant]}`}
+    >
+      {children}
+    </button>
   );
 }
 
@@ -23,13 +37,13 @@ export default function ButtonsPage() {
       <PageHeader
         eyebrow='Comparison'
         title='Buttons'
-        description='Compare the same button ideas across shadcn/ui, MUI, and Radix-based custom implementation.'
+        description='Compare prebuilt buttons in shadcn/ui and MUI with a custom button implementation you would typically build yourself alongside Radix primitives.'
       />
 
       <div className='grid gap-6 xl:grid-cols-3'>
         <DemoCard
           title='shadcn/ui'
-          description='Variant-driven button component with Tailwind styling.'
+          description='Variant-based button component built into your project and easy to extend.'
         >
           <div className='flex flex-wrap gap-3'>
             <ShadcnButton>Primary</ShadcnButton>
@@ -37,6 +51,9 @@ export default function ButtonsPage() {
             <ShadcnButton variant='destructive'>Destructive</ShadcnButton>
             <ShadcnButton variant='outline'>Outline</ShadcnButton>
             <ShadcnButton variant='ghost'>Ghost</ShadcnButton>
+            <ShadcnButton size='icon' aria-label='Notifications'>
+              <Bell className='h-4 w-4' />
+            </ShadcnButton>
           </div>
         </DemoCard>
 
@@ -48,24 +65,35 @@ export default function ButtonsPage() {
             <MuiButton variant='contained'>Primary</MuiButton>
             <MuiButton variant='outlined'>Outlined</MuiButton>
             <MuiButton variant='text'>Text</MuiButton>
-            <MuiButton color='error' variant='contained'>
+            <MuiButton
+              color='error'
+              variant='contained'
+              startIcon={<Trash2 className='h-4 w-4' />}
+            >
               Destructive
+            </MuiButton>
+            <MuiButton
+              variant='contained'
+              startIcon={<Heart className='h-4 w-4' />}
+            >
+              With icon
             </MuiButton>
           </Stack>
         </DemoCard>
 
         <DemoCard
-          title='Radix + custom styling'
-          description='Radix is primitive-first, so you often style your own trigger or control.'
+          title='Custom buttons (Radix-style workflow)'
+          description='Radix gives you primitives for behavior, but for simple controls you often build and style the button yourself.'
         >
           <div className='flex flex-wrap gap-3'>
-            <RadixButtonDemo />
-            <button className='inline-flex h-10 items-center justify-center rounded-md border px-4 text-sm font-medium transition hover:bg-accent'>
-              Custom Outline
-            </button>
-            <button className='inline-flex h-10 items-center justify-center rounded-md px-4 text-sm font-medium transition hover:bg-accent'>
-              Custom Ghost
-            </button>
+            <CustomButton>Primary</CustomButton>
+            <CustomButton variant='outline'>Outline</CustomButton>
+            <CustomButton variant='ghost'>Ghost</CustomButton>
+            <CustomButton variant='destructive'>Destructive</CustomButton>
+            <CustomButton>
+              <Bell className='h-4 w-4' />
+              With icon
+            </CustomButton>
           </div>
         </DemoCard>
       </div>

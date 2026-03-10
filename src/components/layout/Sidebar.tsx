@@ -4,6 +4,7 @@ import {
   MousePointerClick,
   FormInput,
   Layers3,
+  TableProperties,
   Scale,
 } from 'lucide-react';
 
@@ -12,6 +13,7 @@ const navItems = [
   { to: '/buttons', label: 'Buttons', icon: MousePointerClick },
   { to: '/forms', label: 'Forms', icon: FormInput },
   { to: '/overlays', label: 'Overlays', icon: Layers3 },
+  { to: '/data-display', label: 'Data Display', icon: TableProperties },
   { to: '/comparison', label: 'Comparison', icon: Scale },
 ];
 
