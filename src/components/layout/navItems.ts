@@ -10,6 +10,7 @@ import {
   SlidersHorizontal,
   ShieldCheck,
   MonitorSmartphone,
+  CircleDashed,
   Scale,
 } from 'lucide-react';
 
@@ -36,5 +37,6 @@ export const navItems: AppNavItem[] = [
   },
   { to: '/accessibility', label: 'Accessibility Lab', icon: ShieldCheck },
   { to: '/dashboard-lab', label: 'Mini Dashboard', icon: MonitorSmartphone },
+  { to: '/states', label: 'States Lab', icon: CircleDashed },
   { to: '/comparison', label: 'Comparison', icon: Scale },
 ];
