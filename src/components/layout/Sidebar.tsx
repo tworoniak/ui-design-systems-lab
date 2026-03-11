@@ -9,6 +9,7 @@ import {
   Palette,
   SlidersHorizontal,
   Scale,
+  ShieldCheck,
 } from 'lucide-react';
 
 const navItems = [
@@ -25,6 +26,7 @@ const navItems = [
     label: 'Form Playground',
     icon: SlidersHorizontal,
   },
+  { to: '/accessibility', label: 'Accessibility Lab', icon: ShieldCheck },
   { to: '/comparison', label: 'Comparison', icon: Scale },
 ];
 

@@ -10,6 +10,7 @@ import ThemingPage from '@/pages/ThemingPage';
 import ComponentPlaygroundPage from '@/pages/ComponentPlaygroundPage';
 import ComparisonPage from '@/pages/ComparisonPage';
 import FormPlaygroundPage from '@/pages/FormPlaygroundPage';
+import AccessibilityLabPage from '@/pages/AccessibilityLabPage';
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       { path: 'theming', element: <ThemingPage /> },
       { path: 'playground', element: <ComponentPlaygroundPage /> },
       { path: 'playground/forms', element: <FormPlaygroundPage /> },
+      { path: 'accessibility', element: <AccessibilityLabPage /> },
       { path: 'comparison', element: <ComparisonPage /> },
     ],
   },

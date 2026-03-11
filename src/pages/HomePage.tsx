@@ -36,6 +36,7 @@ const sections = [
   { title: 'Theming', to: '/theming' },
   { title: 'Button Playground', to: '/playground' },
   { title: 'Form Playground', to: '/playground/forms' },
+  { title: 'Accessibility Lab', to: '/accessibility' },
   { title: 'Comparison', to: '/comparison' },
 ];
 
