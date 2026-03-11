@@ -7,6 +7,7 @@ import {
   TableProperties,
   PanelTop,
   Palette,
+  SlidersHorizontal,
   Scale,
 } from 'lucide-react';
 
@@ -18,6 +19,12 @@ const navItems = [
   { to: '/data-display', label: 'Data Display', icon: TableProperties },
   { to: '/navigation-feedback', label: 'Nav & Feedback', icon: PanelTop },
   { to: '/theming', label: 'Theming', icon: Palette },
+  { to: '/playground', label: 'Button Playground', icon: SlidersHorizontal },
+  {
+    to: '/playground/forms',
+    label: 'Form Playground',
+    icon: SlidersHorizontal,
+  },
   { to: '/comparison', label: 'Comparison', icon: Scale },
 ];
 

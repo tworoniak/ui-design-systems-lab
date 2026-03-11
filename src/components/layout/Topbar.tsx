@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import ThemeToggle from '@/components/theme/ThemeToggle';
 
 export default function Topbar() {
   return (
@@ -13,9 +14,10 @@ export default function Topbar() {
           </h2>
         </div>
 
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-3'>
           <Badge variant='secondary'>Design Systems</Badge>
           <Badge variant='outline'>Case Study</Badge>
+          <ThemeToggle />
         </div>
       </div>
     </header>

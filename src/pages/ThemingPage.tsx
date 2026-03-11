@@ -207,6 +207,32 @@ export default function ThemingPage() {
         </DemoCard>
       </div>
 
+      <div className='mt-10 rounded-2xl border p-6'>
+        <h3 className='text-lg font-semibold'>Live theme preview</h3>
+
+        <p className='mt-2 text-sm text-muted-foreground'>
+          Toggle light and dark mode using the theme switch in the header to see
+          how the token system adapts across the UI.
+        </p>
+
+        <div className='mt-4 grid gap-4 md:grid-cols-3'>
+          <div className='rounded-xl border p-4'>
+            <p className='text-sm font-semibold'>Background</p>
+            <div className='mt-2 h-10 rounded bg-background border'></div>
+          </div>
+
+          <div className='rounded-xl border p-4'>
+            <p className='text-sm font-semibold'>Primary</p>
+            <div className='mt-2 h-10 rounded bg-primary'></div>
+          </div>
+
+          <div className='rounded-xl border p-4'>
+            <p className='text-sm font-semibold'>Accent</p>
+            <div className='mt-2 h-10 rounded bg-accent'></div>
+          </div>
+        </div>
+      </div>
+
       <div className='mt-8'>
         <ComparisonMatrix rows={rows} />
       </div>
