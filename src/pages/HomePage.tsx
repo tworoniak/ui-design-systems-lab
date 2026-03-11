@@ -37,6 +37,7 @@ const sections = [
   { title: 'Button Playground', to: '/playground' },
   { title: 'Form Playground', to: '/playground/forms' },
   { title: 'Accessibility Lab', to: '/accessibility' },
+  { title: 'Mini Dashboard', to: '/dashboard-lab' },
   { title: 'Comparison', to: '/comparison' },
 ];
 

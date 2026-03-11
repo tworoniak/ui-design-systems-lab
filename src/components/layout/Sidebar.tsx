@@ -8,8 +8,9 @@ import {
   PanelTop,
   Palette,
   SlidersHorizontal,
-  Scale,
   ShieldCheck,
+  MonitorSmartphone,
+  Scale,
 } from 'lucide-react';
 
 const navItems = [
@@ -27,6 +28,7 @@ const navItems = [
     icon: SlidersHorizontal,
   },
   { to: '/accessibility', label: 'Accessibility Lab', icon: ShieldCheck },
+  { to: '/dashboard-lab', label: 'Mini Dashboard', icon: MonitorSmartphone },
   { to: '/comparison', label: 'Comparison', icon: Scale },
 ];
 
