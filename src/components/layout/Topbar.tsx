@@ -5,16 +5,16 @@ import ThemeToggle from '@/components/theme/ThemeToggle';
 export default function Topbar() {
   return (
     <header className='border-b bg-background/80 backdrop-blur'>
-      <div className='flex items-start justify-between gap-3 px-4 py-4 sm:px-6 md:px-8'>
-        <div className='flex items-start gap-3'>
+      <div className='flex items-center justify-between gap-3 px-4 py-4 sm:px-6 md:px-8'>
+        <div className='flex min-w-0 items-center gap-3'>
           <MobileNav />
 
-          <div>
-            <p className='text-sm text-muted-foreground'>
+          <div className='min-w-0'>
+            <p className='truncate text-sm text-muted-foreground'>
               React + TypeScript + Radix + shadcn/ui + MUI
             </p>
-            <h2 className='text-base font-semibold sm:text-lg'>
-              Component comparison playground
+            <h2 className='truncate text-base font-semibold sm:text-lg'>
+              Design systems case study
             </h2>
           </div>
         </div>
