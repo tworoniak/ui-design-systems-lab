@@ -322,25 +322,25 @@ Possible next steps for this project:
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-## Home
+### Home
 
 ![Home](./src/assets/screenshots/home.png)
 
-## Buttons Comparison
+### Buttons Comparison
 
 ![Buttons](./src/assets/screenshots/buttons.png)
 
-## Forms Comparison
+### Forms Comparison
 
 ![Forms](./src/assets/screenshots/forms.png)
 
-## Data Display
+### Data Display
 
 ![Data](./src/assets/screenshots/data-display.png)
 
-## Theming
+### Theming
 
 ![Theming](./src/assets/screenshots/theming.png)
 

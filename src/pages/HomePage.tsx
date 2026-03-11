@@ -34,6 +34,8 @@ const sections = [
   { title: 'Data Display', to: '/data-display' },
   { title: 'Nav & Feedback', to: '/navigation-feedback' },
   { title: 'Theming', to: '/theming' },
+  { title: 'Button Playground', to: '/playground' },
+  { title: 'Form Playground', to: '/playground/forms' },
   { title: 'Comparison', to: '/comparison' },
 ];
 

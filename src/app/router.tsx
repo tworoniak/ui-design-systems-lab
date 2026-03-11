@@ -7,7 +7,9 @@ import OverlaysPage from '@/pages/OverlaysPage';
 import DataDisplayPage from '@/pages/DataDisplayPage';
 import NavigationFeedbackPage from '@/pages/NavigationFeedbackPage';
 import ThemingPage from '@/pages/ThemingPage';
+import ComponentPlaygroundPage from '@/pages/ComponentPlaygroundPage';
 import ComparisonPage from '@/pages/ComparisonPage';
+import FormPlaygroundPage from '@/pages/FormPlaygroundPage';
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +23,8 @@ export const router = createBrowserRouter([
       { path: 'data-display', element: <DataDisplayPage /> },
       { path: 'navigation-feedback', element: <NavigationFeedbackPage /> },
       { path: 'theming', element: <ThemingPage /> },
+      { path: 'playground', element: <ComponentPlaygroundPage /> },
+      { path: 'playground/forms', element: <FormPlaygroundPage /> },
       { path: 'comparison', element: <ComparisonPage /> },
     ],
   },
