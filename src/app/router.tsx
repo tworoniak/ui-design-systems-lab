@@ -11,6 +11,7 @@ import ComponentPlaygroundPage from '@/pages/ComponentPlaygroundPage';
 import ComparisonPage from '@/pages/ComparisonPage';
 import FormPlaygroundPage from '@/pages/FormPlaygroundPage';
 import AccessibilityLabPage from '@/pages/AccessibilityLabPage';
+import MiniDashboardPage from '@/pages/MiniDashboardPage';
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
       { path: 'playground', element: <ComponentPlaygroundPage /> },
       { path: 'playground/forms', element: <FormPlaygroundPage /> },
       { path: 'accessibility', element: <AccessibilityLabPage /> },
+      { path: 'dashboard-lab', element: <MiniDashboardPage /> },
       { path: 'comparison', element: <ComparisonPage /> },
     ],
   },
