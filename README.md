@@ -13,14 +13,16 @@ A hands-on **React + TypeScript** playground for learning and comparing modern U
 - **shadcn/ui**
 - **MUI**
 
-This project implements the **same UI patterns across all three systems** so you can compare:
+Instead of using only one library, this project **rebuilds the same UI patterns across all three systems** so their tradeoffs become clear in a real application.
+
+The project explores:
 
 - component APIs
 - styling workflows
 - accessibility patterns
-- theming approaches
+- theming systems
 - developer experience
-- real-world tradeoffs
+- real-world UI architecture tradeoffs
 
 ---
 
@@ -29,34 +31,45 @@ This project implements the **same UI patterns across all three systems** so you
 The purpose of **UI Systems Lab** is to move beyond simply “using a component library” and instead understand:
 
 - how different systems approach **UI architecture**
-- where **unstyled primitives** shine
-- when **editable local components** are most useful
-- when a **prebuilt library** is the fastest and most practical choice
+- when **unstyled primitives** are the best foundation
+- when **editable component code** is the best long-term strategy
+- when a **full component library** delivers the fastest results
 
-Rather than building random isolated demos, this project uses consistent side-by-side comparisons across real product UI patterns.
+Rather than building isolated demos, the project uses **consistent side-by-side implementations of real UI patterns**.
 
 ---
 
 ## 🧰 Tech Stack
+
+Core technologies used in the project:
 
 - **React**
 - **TypeScript**
 - **Vite**
 - **React Router**
 - **Tailwind CSS**
+
+UI systems explored:
+
 - **Radix UI**
 - **shadcn/ui**
 - **MUI**
+
+Additional libraries:
+
 - **Lucide React**
 - **Sonner**
+- **Framer Motion**
 
 ---
 
 ## 📚 What This Project Covers
 
-The app is organized into pages that compare the same pattern in all three systems.
+The application is organized into pages that compare the same UI pattern across all three systems.
 
 ### Included sections
+
+### Comparison Pages
 
 - **Buttons**
 - **Forms**
@@ -65,6 +78,72 @@ The app is organized into pages that compare the same pattern in all three syste
 - **Navigation & Feedback**
 - **Theming**
 - **Final Comparison**
+
+Each page implements the same pattern with:
+
+- Radix primitives
+- shadcn/ui components
+- MUI components
+
+This makes differences in API design and developer workflow easier to see.
+
+---
+
+## 🧪 Interactive Labs
+
+Beyond simple comparisons, the project includes interactive exploration areas.
+
+### Button Playground
+
+A control panel allows you to adjust:
+
+- variants
+- sizes
+- icons
+- disabled state
+
+The same configuration is rendered simultaneously with:
+
+- shadcn/ui
+- MUI
+- custom component implementation
+
+---
+
+### Form Playground
+
+Compare form inputs across systems while interacting with:
+
+- text inputs
+- selects
+- switches
+- checkboxes
+
+---
+
+### Accessibility Lab
+
+Tests accessibility patterns including:
+
+- keyboard navigation
+- focus states
+- dialogs
+- menus
+
+This highlights how Radix, shadcn, and MUI handle accessibility concerns.
+
+---
+
+### States Lab
+
+Demonstrates common product UI states:
+
+- loading
+- skeleton placeholders
+- empty states
+- error states
+
+These patterns are essential in real applications but often overlooked in component demos.
 
 ---
 
@@ -191,12 +270,24 @@ src/
       AppShell.tsx
       Sidebar.tsx
       Topbar.tsx
+      MobileNav.tsx
+
+    home/
+      FeatureHighlightCard.tsx
+      ExploreSection.tsx
+
+    playground/
+      PlaygroundControls.tsx
+      PlaygroundPreview.tsx
+
+    states/
+      StateBlock.tsx
 
     shared/
-      ComparisonMatrix.tsx
-      ComparisonNotes.tsx
       DemoCard.tsx
       PageHeader.tsx
+      ComparisonMatrix.tsx
+      ComparisonNotes.tsx
       TokenSwatch.tsx
 
     ui/
@@ -210,10 +301,17 @@ src/
     DataDisplayPage.tsx
     NavigationFeedbackPage.tsx
     ThemingPage.tsx
+    AccessibilityLabPage.tsx
+    MiniDashboardPage.tsx
+    StatesLabPage.tsx
     ComparisonPage.tsx
+
+  data/
+    dashboardData.ts
 
   lib/
     utils.ts
+    statusStyles.ts
 
   main.tsx
   index.css
@@ -223,8 +321,15 @@ src/
 
 ```bash
 npm install react-router-dom
+npm install framer-motion
+npm install lucide-react
 npm install @mui/material @emotion/react @emotion/styled
-npm install @mui/icons-material
+npm install sonner
+```
+
+### Radix primitives
+
+```bash
 npm install @radix-ui/react-dialog
 npm install @radix-ui/react-dropdown-menu
 npm install @radix-ui/react-tabs
@@ -234,7 +339,7 @@ npm install @radix-ui/react-select
 npm install @radix-ui/react-accordion
 npm install @radix-ui/react-progress
 npm install @radix-ui/react-toast
-npm install lucide-react
+
 ```
 
 ### shadcn/ui components
@@ -256,6 +361,8 @@ npx shadcn@latest add table
 npx shadcn@latest add alert
 npx shadcn@latest add breadcrumb
 npx shadcn@latest add progress
+npx shadcn@latest add sheet
+npx shadcn@latest add skeleton
 npx shadcn@latest add sonner
 ```
 
@@ -305,14 +412,12 @@ A few of the biggest lessons from building this:
 
 Possible next steps for this project:
 
-- add dark mode toggle
-- add responsive/mobile navigation patterns
-- add drawer/sheet comparisons
-- add tooltip/popover comparisons
-- add skeleton/loading state comparisons
-- add charts and dashboard widgets
-- add a dedicated “When I’d use each system” case study page
-- add screenshots and a live deployed demo
+- tooltip / popover comparisons
+- drawer / sheet comparisons
+- chart components
+- data-heavy dashboards
+- performance comparison of libraries
+- deeper design token exploration
 
 ---
 
