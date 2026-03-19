@@ -6,22 +6,16 @@ export default function ThemeToggle() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <div className='flex items-center gap-2'>
-      <Button
-        size='icon'
-        variant={theme === 'light' ? 'default' : 'outline'}
-        onClick={() => setTheme('light')}
-      >
-        <Sun className='h-4 w-4' />
-      </Button>
-
-      <Button
-        size='icon'
-        variant={theme === 'dark' ? 'default' : 'outline'}
-        onClick={() => setTheme('dark')}
-      >
+    <Button
+      size='icon'
+      variant='outline'
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+    >
+      {theme === 'dark' ? (
         <Moon className='h-4 w-4' />
-      </Button>
-    </div>
+      ) : (
+        <Sun className='h-4 w-4' />
+      )}
+    </Button>
   );
 }
